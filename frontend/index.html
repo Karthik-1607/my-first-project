@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            background-color: rgb(231, 160, 88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            width: 30%;
+            border: 20px;
+            padding: 1% 2%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-field,
+        .form-radio,
+        .form-field input,
+        .form-field select,
+        .form-field input[type="file"] {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+            display: block;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        @media (max-width: 430px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="container" action="./login.html">
+        <h1 class="title">Register</h1>
+        <div class="form-field">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your name" required />
+        </div>
+        <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email ID" required />
+        </div>
+        <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required />
+        </div>
+        <div class="form-radio">
+            <label>Gender</label>
+            <input type="radio" name="gender" id="male" value="male" required /> Male
+            <input type="radio" name="gender" id="female" value="female" required /> Female
+            <input type="radio" name="gender" id="others" value="others" /> Others
+        </div>
+        <div class="form-field">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required />
+        </div>
+        <div class="form-field">
+            <label for="state">State</label>
+            <select id="state" required>
+                <option value="">Select your state</option>
+                <option value="ap">AP</option>
+                <option value="ts">TS</option>
+                <option value="br">BR</option>
+                <option value="hm">HM</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="file">Upload File</label>
+            <input type="file" id="file" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
